@@ -1,0 +1,482 @@
+/* Navbar */
+header {
+    color: white;
+    /* padding: 10px 20px; */
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.nav .btn-precalificate2 {
+
+    border: none;
+    border-radius: 20px;
+    padding: 5px 2px;
+    color: black !important;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    content-visibility: hidden;
+}
+.nav .logo {
+    padding-left: 40px;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.nav li {
+    margin: 0 7px;
+    position: relative;
+    color: transparent;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Estado inicial en la navbar */
+.btn-precalificate,
+.btn-whatsapp {
+    position: relative; /* Posición dentro de la navbar */
+    opacity: 1; /* Completamente visible */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Suaviza opacidad y transformación */
+}
+
+/* Estado flotante */
+.btn-fixed {
+    position: fixed; /* Fija el botón al scroll */
+    right: 2px; /* Espaciado del borde derecho */
+    z-index: 1000; /* Asegura visibilidad */
+    border-radius: 20px 0 0 20px;
+    padding: 10px 15px;
+    opacity: 0; /* Inicialmente transparente */
+    visibility: hidden; /* Oculto del flujo del documento */
+    transform: translateY(2px); /* Animación de movimiento al aparecer */
+}
+
+/* Botón visible al bajar */
+.btn-visible {
+    opacity: 1; /* Completamente visible */
+    visibility: visible; /* Se vuelve visible */
+    transform: translateY(0); /* Sin movimiento adicional */
+}
+
+/* Posición de los botones cuando se hace scroll hacia abajo */
+.btn-precalificate.btn-fixed,
+.btn-whatsapp.btn-fixed {
+    bottom: 60%; /* Posiciona en la mitad de la pantalla verticalmente */
+    transform: translateY(60%); /* Asegura que estén exactamente en el centro */
+
+}
+
+
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+    .hero-section h1 {
+        font-size: 45px;
+    }
+
+    .text-section {
+        font-size: 24px;
+    }
+
+    .cta-box p {
+        font-size: 28px;
+    }
+
+    .soluciones-container {
+        flex-wrap: wrap; /* Permitir que las tarjetas se ajusten en filas si es necesario */
+        justify-content: center; /* Centrar las tarjetas si no ocupan todo el ancho */
+    }
+    .solucion {
+        flex: 0 0 45%; /* Ajustar el ancho para que las tarjetas ocupen aproximadamente la mitad del contenedor */
+        max-width: none; /* Eliminar el límite de ancho */
+    }
+
+    .nosotros-container, .stat-box {
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 668px) {
+
+    .nav .logo {
+        padding-left: 0px;
+        height: 30px;
+    }
+    .full-width-bg {
+        width: 100%;
+         padding: 0;
+        margin: 0;
+    }
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        text-align: center; /* Centrar el texto y elementos */
+    }
+    .nav .btn-precalificate2 {
+        background-color: #00b6e1;
+        border: none;
+        border-radius: 20px;
+        padding: 5px 2px;
+        color: black !important;
+        display: inline-flex
+    ;
+        align-items: center;
+        cursor: pointer;
+         content-visibility: visible;
+    }
+    .hero-section img {
+        max-width: 90%; /* Asegura que la imagen no exceda el ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        margin-top: 20px; /* Espaciado superior */
+        z-index: 0; /* Mantiene la posición en la pila de elementos */
+    }
+    .image-section {
+        flex: 1;
+        content-visibility: hidden;
+    }
+    .hero-section h1 {
+        font-size: 25px;
+        text-align: justify;
+    }
+
+    .text-section {
+        font-size: 22px;
+    }
+
+    .cta-box p {
+        font-size: 24px;
+    }
+
+    .cta-button {
+        padding: 10px 80px;
+    }
+
+    #soluciones h2 {
+        font-size: 36px;
+    }
+    #soluciones {
+        padding: 0px 50px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        user-select: none;
+    }
+    .solucion p {
+        font-size: 15px;
+        color: #f0f0f0;
+        margin-top: 0;
+        /* margin-bottom: auto; */
+        /* text-align: left; */
+        /* padding-left: 10px; */
+        /* font-weight: 300; */
+        /* margin-right: 100px; */
+    }
+    .soluciones-container {
+        gap: 10px;
+    }
+
+
+
+    .solucion {
+        max-width: 100%;
+    }
+    .data-video-muted-loop {
+        width: auto;
+        max-height: 200px;
+        /* object-fit: cover; */
+        border-radius: 8px;
+    }
+
+    .solucion.visible {
+        opacity: 1;
+        transform: translateY(0);
+        width: 550px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .video-container {
+    width: 100%;
+    height: 250px; /* Define la altura deseada para el contenedor horizontal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Recorta cualquier parte del video que salga del contenedor */
+    position: relative;
+    background-color: #000; /* Fondo opcional para destacar el contenedor */
+}
+.influencia-bg {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #00b6e1 10%, #e8e8e8 30%);
+}
+#influencia {
+    display: flex
+;
+    justify-content: center;
+    padding: 10px;
+    max-width: 100%;
+}
+.video-container video {
+    width: auto; /* Ajusta automáticamente el ancho del video */
+    height: 100%; /* El video ocupa toda la altura del contenedor */
+    object-fit: cover; /* Asegura que el video se recorte para llenar el espacio */
+}
+
+    .subheading {
+        font-size: 40px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 800;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .stats-row {
+
+        gap: 10px;
+    }
+
+    .footer-container {
+        padding: 20px;
+        text-align: center;
+    }
+    .footer-section p, .footer-section a {
+        color: #ffffff;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav ul {
+        display: none;
+    }
+
+    .nav .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-section {
+        margin: 0;
+    }
+}
+
+
+.precalificacion-bg {
+    background: linear-gradient(to right, #007bba, #0096d6);
+    color: white;
+}
+
+.content-wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+
+}
+
+
+@media (max-width: 768px) {
+
+    .nav {
+        display: flex ;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav ul {
+        display: flex
+;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+    }
+    .btn-precalificate {
+        background-color: #00b6e1;
+        border: none;
+        border-radius: 20px;
+        padding: 5px 2px;
+        color: black !important;
+        display: inline-flex
+    ;
+        align-items: center;
+        cursor: pointer;
+    }
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    p {
+
+        font-size: smaller;
+
+        text-align: initial;
+
+    .hero-section h1 {
+        font-size: 30px;
+        text-align: initial;
+    }
+    .hero-bg {
+        background-color: #0b0b0b;
+        padding: 0;
+    }
+    .text-section {
+        font-size: 22px;
+    }
+    .image-section {
+        flex: 1;
+        position: absolute;
+    }
+    .hero-section img {
+        max-width: 100%;
+        height: 180px;
+        top: 380px;
+        margin-left: 170px;
+        margin-bottom: 200px;
+        margin-top: -50px;
+        z-index: 1;
+    }
+    .cta-section {
+        background-color: #007a97;
+        border-radius: 25px;
+        padding: 10px;
+        margin-top: 20px;
+        max-width: 1150px;
+        margin-left: -20px;
+        margin-right: auto;
+        text-align: center;
+        font-weight: 700;
+        font-size: 32px;
+        min-height: 130px;
+        z-index: 0;
+        width: 110%;
+    }
+        .cta-box p {
+            font-size: 24px;
+        margin-right: 200px;
+    }
+.hero-bg {
+    background-color: #0b0b0b;
+    padding: 0;
+}
+
+.cta-button {
+    padding: 5px 70px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+    #soluciones h2 {
+        font-size: 36px;
+    }
+
+    .soluciones-container {
+        gap: 10px;
+    }
+
+    .solucion {
+        max-width: 100%;
+    }
+
+    .stats-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    .footer-container {
+        padding: 0;
+        text-align: center;
+    }
+    .footer-section h4 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 35px;
+        margin-bottom: 10px;
+        color: white;
+
+        font-weight: bold;
+        margin-top: 0px;
+    }
+    .footer-section.productos ul {
+        list-style-type: none; /* Quitar viñetas */
+        padding: 0;
+        margin: 0 auto; /* Centrar la lista en el contenedor */
+        display: grid; /* Activar diseño de cuadrícula */
+        grid-template-rows: repeat(3, auto); /* Tres filas automáticas */
+        grid-auto-flow: column; /* Fluir los elementos en columnas verticales */
+        gap: 5px; /* Espacio reducido entre elementos */
+        width: 300px; /* Ajusta este valor según el diseño deseado */
+        text-align: left; /* Alinear el texto dentro de los elementos */
+
+    }
+
+
+    .footer-section.contacto {
+         margin-right: 0;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .nav ul {
+        display: none;
+    }
+
+    .nav .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-section {
+        margin: 0;
+    }
+}
+}

@@ -1,0 +1,159 @@
+/* Navbar */
+
+header {
+    color: white;
+    /* padding: 10px 20px; */
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.nav .btn-precalificate2 {
+
+    border: none;
+    border-radius: 20px;
+    padding: 5px 2px;
+    color: black !important;
+    display: inline-flex
+;
+    align-items: center;
+    cursor: pointer;
+    content-visibility: hidden;
+}
+.nav .logo {
+    padding-left: 40px;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.nav li {
+    margin: 0 7px;
+    position: relative;
+    color: transparent;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Estado inicial en la navbar */
+.btn-precalificate,
+.btn-whatsapp {
+    position: relative; /* Posición dentro de la navbar */
+    opacity: 1; /* Completamente visible */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Suaviza opacidad y transformación */
+}
+
+
+
+
+.menu-icon {
+    display: none; /* Ocultar en escritorio */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Estilo general del botón PRECALIFICARME */
+.btn-precalificate {
+    background-color: #00b6e1;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: black !important;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.btn-precalificate img {
+    margin-left: 5px;
+    height: 25px;
+}
+
+/* Ocultar/Mostrar botones en distintas pantallas */
+.desktop-only {
+    display: inline-flex; /* Visible en escritorio */
+}
+
+.mobile-only {
+    display: none; /* Oculto por defecto */
+}
+
+
+
+
+/* Logo de escritorio */
+.nav .desktop-only {
+    position: relative; /* Permite mover el elemento sin afectar a otros */
+    left: 50px; /* Mueve el logo 50px hacia la derecha */
+}
+
+/* Logo de móvil */
+.mobile-only {
+    display: none; /* Oculto en escritorio */
+
+}
+
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Mostrar ícono hamburguesa */
+    }
+
+    .nav {
+        position: relative;
+    }
+
+    /* Ocultar el menú de enlaces por defecto */
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #000;
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .nav ul.active {
+        display: flex; /* Mostrar menú al activar */
+    }
+
+    /* Ajustes del logo */
+    .desktop-only {
+        display: none; /* Ocultar logo de escritorio */
+    }
+
+    .mobile-only {
+        display: inline-flex; /* Mostrar logo de móvil */
+        align-items: center;
+        margin-left: -50px; /* Mueve el logo 20px hacia la izquierda */
+    }
+
+
+    /* Centrar el botón PRECALIFICARME */
+    .btn-precalificate {
+        position: absolute;
+        top: -2px;
+        left: 63%;
+        transform: translateX(-50%);
+        z-index: 9; /* Asegura que esté por encima del contenido */
+    }
+}

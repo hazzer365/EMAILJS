@@ -1,0 +1,1095 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+body, body {
+     /* Marca los bordes de todos los elementos */
+     background: linear-gradient(to bottom, #000000 50%, /* Negro más arriba, a la mitad de la página */
+      #007bba 30%, /* Azul oscuro */ #00b6e1 50%, /* Azul claro */ #000000 10%);
+    background-attachment: fixed; /* Para mantener el fondo estático al hacer scroll */
+    background-size: cover; /* Asegura que cubra todo */
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif; /* O cualquier tipografía que estés usando */
+}
+
+
+
+/* Fondo que cubre toda la pantalla */
+.full-width-bg {
+    width: 100%;
+    padding: 40px 0;
+    margin: 0; /* Elimina el margen negativo */
+}
+
+
+.content-wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+
+}
+
+.hero-bg {
+    background: linear-gradient(to bottom,
+        #000000 0%,
+        #000000 40%,
+        #000000 80%,
+        #00b6e1 100%);
+}
+
+.soluciones-bg {
+    background: linear-gradient(to bottom,
+        #00b6e1 0%,
+        #007bba 40%,
+        #0096d6 70%,
+        #00b6e1 100%,
+        #ffffff 100%);
+}
+
+
+.influencia-bg {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom,
+        #00b6e1 -10%,
+        #e8e8e8 20%);
+}
+
+.nosotros-bg {
+    background-color: #e8e8e8;
+}
+
+.footer-bg {
+    background-color: #000000;
+}
+
+/* Asegura que el contenido permanezca centrado */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: inherit; /* Hereda el color del fondo de la sección */
+}
+
+#main-container {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+
+
+/* Ocultar el texto del botón Precalificate cuando está fijo */
+.btn-precalificate.hide-text span {
+    display: none; /* Ocultar el texto */
+}
+
+/* Ajustes específicos para el botón Precalificate */
+.btn-precalificate {
+    background-color: #00b6e1;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: black !important;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* Cuando se coloca el cursor sobre el botón, muestra el texto */
+.btn-precalificate:hover span {
+    opacity: 1; /* Texto visible */
+}
+.btn-precalificate img {
+    width: 30px; /* Tamaño de la imagen */
+    height: auto;
+
+}
+.btn-precalificate.circle {
+    right: 60px;
+    background-color: #00b6e1;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: black !important;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* Estilo cuando el botón de WhatsApp está fuera de la navbar (Círculo) */
+.btn-whatsapp.circle {
+    background-color: #47c857;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    padding: 10px 15px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Estilo normal en la navbar */
+.btn-whatsapp {
+    background-color: #47c857;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    padding: 10px 15px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-whatsapp img {
+    width: 20px;
+    height: auto;
+    margin-left: 5px;
+}
+
+/* Posición cuando está fijo */
+.btn-whatsapp.btn-fixed {
+    bottom: 60%; /* Ajuste de la posición vertical */
+}
+
+
+
+
+/* Hero Section */
+.hero-section {
+    color: #fff;
+    text-align: left;
+    position: relative;
+    padding: 20px;
+    user-select: none;
+}
+
+.hero-section h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 57px;
+    line-height: 1.2;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text-section {
+    margin-left: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+}
+
+.image-section {
+    flex: 1;
+}
+
+.image-section img {
+    height: 400px;
+    margin-left: 100px;
+    position: relative;
+    top: 70px;
+    transform: translateX(-15%);
+    z-index: 1;
+}
+
+.cta-section {
+    background-color: #007a97;
+    border-radius: 25px;
+    padding: 40px 20px;
+    margin-top: 20px;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    min-height: 130px;
+    z-index: 0;
+}
+
+.cta-box p {
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #03b6e1;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    padding: 13px 120px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e1e1e1;
+}
+
+/* Soluciones section */
+#soluciones {
+
+    padding: 90px 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    user-select: none;
+}
+
+#soluciones h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 43px;
+    font-weight: 800;
+    color: #000;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.soluciones-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.solucion {
+    background-color: #5dc8d3;
+    border-radius: 30px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.solucion img {
+    width: 150px;
+    height: auto;
+    margin: 15px auto;
+}
+
+.imagen-grande {
+    width: 200px !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+}
+
+.solucion h3 {
+    font-size: 32px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.solucion p {
+    font-size: 15px;
+    color: #f0f0f0;
+    margin-top: 0;
+    margin-bottom: auto;
+    text-align: left;
+    padding-left: 10px;
+    font-weight: 300;
+}
+
+.solucion .btn {
+    display: block;
+    width: 91%;
+    margin-top: 10px;
+    padding: 15px 20px;
+    background-color: #fff;
+    color: #3c3c3c;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    align-self: center;
+    transition: background-color 0.3s;
+    margin-bottom: -11px;
+    font-size: 20px;
+}
+
+.solucion .btn:hover {
+    background-color: #d4f1f4;
+}
+
+.image-section-soluciones {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.over-image-soluciones {
+    height: 720px;
+    width: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -250px;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+}
+.image-section-influencia {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.over-image-influencia {
+    height: 720px;
+    width: auto;
+    position: absolute;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+.solucion {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solucion:hover {
+    transform: scale(1.05) !important; /* Aumenta el tamaño un 5% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más grande */
+}
+
+
+/* influencia section */
+#influencia {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+
+
+    max-width: 100%;
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    display: block;
+    border: 2px solid #00b6e1;
+    height: 500px;
+    width: 100%;
+    margin-left: 0; /* Evita desplazamientos */
+    margin-right: 0;
+    max-width: none;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sección de "Nosotros" */
+#nosotros {
+
+    display: flex;
+    flex-wrap: wrap; /* Permite que los hijos bajen a una nueva fila si es necesario */
+    justify-content: center; /* Asegura que los elementos estén centrados */
+    gap: 20px;
+    background-color: #e8e8e8;
+    border-radius: 35px;
+    max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
+    box-sizing: border-box; /* Considera padding y border en el ancho total */
+    overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+}
+
+
+.nosotros-container {
+    background-color: rgba(255, 255, 255, .7);
+    max-height: 500px;
+    border-radius: 15px;
+    padding: 20px;
+    padding-top: 40px;
+    flex: 1 1 35%;
+    max-width: 420px;
+    justify-content: space-between;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#nosotros .cta-button {
+    display: inline-block;
+    background-color: #00b2ff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-left: 90px;
+}
+
+#nosotros .cta-button:hover {
+    background-color: #008ecc; /* Color de fondo al pasar el cursor */
+}
+
+
+
+
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00b6e1;
+    margin-bottom: 5px;
+}
+
+.subheading {
+    font-size: 60px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 800;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Ajustes de las estadísticas */
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 60%;
+    gap: 15px;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.stat-box {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 9px 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 100px;
+}
+
+.stat-title {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    color: #00b6e1;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.small-text {
+    font-size: 25px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.stat-description {
+    font-size: 17px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.stat-highlight {
+    font-size: 17px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 1px;
+}
+
+
+/* Animación para el título */
+.titulo-soluciones {
+    font-size: 43px;
+    font-weight: 800;
+    color: #000;
+    text-align: left;
+    margin-bottom: 20px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.titulo-soluciones.focused {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Animación para las tarjetas */
+.solucion {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.solucion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-top-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    width: 63px; /* Ajustado a 63px como mencionaste */
+    height: 63px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%; /* Para que sea redondeado */
+ background-color: rgba(32, 37, 43, 0.8);
+    box-shadow: 0 4px 6px rgba(32, 37, 43, 0.8); /* Sombra con el color rgba con opacidad 0.8 */
+}
+
+.back-top-btn img {
+    width: 24px; /* Ajusta el tamaño del SVG */
+    height: auto;
+    pointer-events: none; /* Para que el clic se registre sobre el botón y no sobre la imagen */
+}
+
+
+/* Contenedor principal del footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    overflow: hidden;
+    color: white;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    font-size: 20px;
+    margin-left: auto;
+}
+
+.footer-section h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Productos y contacto */
+.footer-section.productos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section.productos ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section.productos ul li a {
+    font-size: 25px;
+    color: #b6b9bc;
+    text-decoration: none;
+}
+
+.footer-section.productos ul li a:hover {
+    color: #ffffff;
+}
+
+
+
+
+.footer-section p,
+.footer-section a {
+    color: #ebeced;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #ffffff;
+}
+
+.footer-section.contacto {
+    margin-right: 100px;
+}
+
+.social-icons-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.social-icons-bottom a {
+    color: #b6b9bc;
+    font-size: 25px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons-bottom a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: #000;
+    color: #b6b9bc;
+    font-size: 12px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.footer-section p i {
+    margin-right: 8px;
+}
+
+.footer-section.noticias {
+    margin-top: 30px;
+}
+
+
+.suscribete-boletin, .zona-editorial {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.4;
+    color: #b6b9bc;
+    text-decoration: none;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+    .hero-section h1 {
+        font-size: 45px;
+    }
+
+    .text-section {
+        font-size: 24px;
+    }
+
+    .cta-box p {
+        font-size: 28px;
+    }
+
+    .soluciones-container {
+        flex-wrap: wrap; /* Permitir que las tarjetas se ajusten en filas si es necesario */
+        justify-content: center; /* Centrar las tarjetas si no ocupan todo el ancho */
+    }
+    .solucion {
+        flex: 0 0 45%; /* Ajustar el ancho para que las tarjetas ocupen aproximadamente la mitad del contenedor */
+        max-width: none; /* Eliminar el límite de ancho */
+    }
+
+    .nosotros-container, .stat-box {
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 668px) {
+
+    .nav .logo {
+        padding-left: 0px;
+        height: 30px;
+    }
+    .full-width-bg {
+        width: 100%;
+         padding: 0;
+        margin: 0;
+    }
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        text-align: center; /* Centrar el texto y elementos */
+    }
+    .nav .btn-precalificate2 {
+        background-color: #00b6e1;
+        border: none;
+        border-radius: 20px;
+        padding: 5px 2px;
+        color: black !important;
+        display: inline-flex
+    ;
+        align-items: center;
+        cursor: pointer;
+         content-visibility: visible;
+    }
+    .hero-section img {
+        max-width: 90%; /* Asegura que la imagen no exceda el ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        margin-top: 20px; /* Espaciado superior */
+        z-index: 0; /* Mantiene la posición en la pila de elementos */
+    }
+    .image-section {
+        flex: 1;
+        content-visibility: hidden;
+    }
+    .hero-section h1 {
+        font-size: 25px;
+        text-align: justify;
+    }
+
+    .text-section {
+        font-size: 22px;
+    }
+
+    .cta-box p {
+        font-size: 24px;
+    }
+
+    .cta-button {
+        padding: 10px 80px;
+    }
+
+    #soluciones h2 {
+        font-size: 36px;
+    }
+    #soluciones {
+        padding: 0px 50px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        user-select: none;
+    }
+    .solucion p {
+        font-size: 15px;
+        color: #f0f0f0;
+        margin-top: 0;
+        /* margin-bottom: auto; */
+        /* text-align: left; */
+        /* padding-left: 10px; */
+        /* font-weight: 300; */
+        /* margin-right: 100px; */
+    }
+    .soluciones-container {
+        gap: 10px;
+    }
+
+
+
+    .solucion {
+        max-width: 100%;
+    }
+    .data-video-muted-loop {
+        width: auto;
+        max-height: 200px;
+        /* object-fit: cover; */
+        border-radius: 8px;
+    }
+
+    .solucion.visible {
+        opacity: 1;
+        transform: translateY(0);
+        width: 550px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .video-container {
+    width: 100%;
+    height: 250px; /* Define la altura deseada para el contenedor horizontal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Recorta cualquier parte del video que salga del contenedor */
+    position: relative;
+    background-color: #000; /* Fondo opcional para destacar el contenedor */
+}
+.influencia-bg {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #00b6e1 10%, #e8e8e8 30%);
+}
+#influencia {
+    display: flex
+;
+    justify-content: center;
+    padding: 10px;
+    max-width: 100%;
+}
+.video-container video {
+    width: auto; /* Ajusta automáticamente el ancho del video */
+    height: 100%; /* El video ocupa toda la altura del contenedor */
+    object-fit: cover; /* Asegura que el video se recorte para llenar el espacio */
+}
+
+    .subheading {
+        font-size: 40px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 800;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .stats-row {
+
+        gap: 10px;
+    }
+
+    .footer-container {
+        padding: 20px;
+        text-align: center;
+    }
+    .footer-section p, .footer-section a {
+        color: #ffffff;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav ul {
+        display: none;
+    }
+
+    .nav .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-section {
+        margin: 0;
+    }
+}
+
+
+.precalificacion-bg {
+    background: linear-gradient(to right, #007bba, #0096d6);
+    color: white;
+}
+
+.content-wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+
+}
+
+
+@media (max-width: 768px) {
+
+    .nav {
+        display: flex ;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav ul {
+        display: flex
+;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+    }
+    .btn-precalificate {
+        background-color: #00b6e1;
+        border: none;
+        border-radius: 20px;
+        padding: 5px 2px;
+        color: black !important;
+        display: inline-flex
+    ;
+        align-items: center;
+        cursor: pointer;
+    }
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    p {
+
+        font-size: smaller;
+
+        text-align: initial;
+
+    .hero-section h1 {
+        font-size: 30px;
+        text-align: initial;
+    }
+    .hero-bg {
+        background-color: #0b0b0b;
+        padding: 0;
+    }
+    .text-section {
+        font-size: 22px;
+    }
+    .image-section {
+        flex: 1;
+        position: absolute;
+    }
+    .hero-section img {
+        max-width: 100%;
+        height: 180px;
+        top: 380px;
+        margin-left: 170px;
+        margin-bottom: 200px;
+        margin-top: -50px;
+        z-index: 1;
+    }
+    .cta-section {
+        background-color: #007a97;
+        border-radius: 25px;
+        padding: 10px;
+        margin-top: 20px;
+        max-width: 1150px;
+        margin-left: -20px;
+        margin-right: auto;
+        text-align: center;
+        font-weight: 700;
+        font-size: 32px;
+        min-height: 130px;
+        z-index: 0;
+        width: 110%;
+    }
+        .cta-box p {
+            font-size: 24px;
+        margin-right: 200px;
+    }
+.hero-bg {
+    background-color: #0b0b0b;
+    padding: 0;
+}
+
+.cta-button {
+    padding: 5px 70px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+    #soluciones h2 {
+        font-size: 36px;
+    }
+
+    .soluciones-container {
+        gap: 10px;
+    }
+
+    .solucion {
+        max-width: 100%;
+    }
+
+    .stats-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    .footer-container {
+        padding: 0;
+        text-align: center;
+    }
+    .footer-section h4 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 35px;
+        margin-bottom: 10px;
+        color: white;
+
+        font-weight: bold;
+        margin-top: 0px;
+    }
+    .footer-section.productos ul {
+        list-style-type: none; /* Quitar viñetas */
+        padding: 0;
+        margin: 0 auto; /* Centrar la lista en el contenedor */
+        display: grid; /* Activar diseño de cuadrícula */
+        grid-template-rows: repeat(3, auto); /* Tres filas automáticas */
+        grid-auto-flow: column; /* Fluir los elementos en columnas verticales */
+        gap: 5px; /* Espacio reducido entre elementos */
+        width: 300px; /* Ajusta este valor según el diseño deseado */
+        text-align: left; /* Alinear el texto dentro de los elementos */
+
+    }
+
+
+    .footer-section.contacto {
+         margin-right: 0;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .nav ul {
+        display: none;
+    }
+
+    .nav .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-section {
+        margin: 0;
+    }
+}
+}
